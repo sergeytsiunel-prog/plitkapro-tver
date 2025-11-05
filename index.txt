@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПлиткаPRO - Профессиональная укладка плитки в Твери</title>
+    <meta name="description" content="Профессиональная укладка плитки в Твери. Гарантия 3 года. Бесплатный замер и расчет сметы. Опыт 10 лет.">
+    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav__content">
+                    <div class="logo">ПлиткаPRO</div>
+                    <div class="nav__phone">
+                        <a href="tel:+79157171715">+7 915 717-17-15</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <h1>Профессиональная укладка плитки "как в каталоге"</h1>
+                    <p>Команда мастеров с 10-летним стажем. Гарантия 3 года.</p>
+                    <button class="btn btn-primary">Бесплатный выезд и расчет сметы</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="container">
+                <h2>Наши услуги</h2>
+                <p>Секция услуг будет здесь</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ПлиткаPRO. Тверь</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
