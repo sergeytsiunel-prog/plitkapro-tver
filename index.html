@@ -3,151 +3,70 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ПлиткаPRO — профессиональная укладка плитки в Твери</title>
-  <meta name="description" content="Профессиональная укладка плитки в Твери. Опыт 10 лет. Гарантия 3 года. Бесплатный замер и расчет сметы.">
+  <title>ПлиткаPRO — профессиональная укладка плитки и ремонт ванных в Твери</title>
+
+  <!-- 🔹 SEO -->
+  <meta name="description" content="Профессиональная укладка плитки и ремонт ванных комнат в Твери. Душевые поддоны, разводка коммуникаций, сантехника под ключ. Бесплатный замер и расчёт сметы.">
+  <meta name="keywords" content="плиточник тверь, укладка плитки тверь, ремонт ванной тверь, душевой поддон тверь, плитка про тверь, плиточник под ключ, сантехника тверь">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="ПлиткаPRO — ремонт и укладка плитки в Твери">
+
+  <!-- 🔹 Open Graph (для соцсетей и мессенджеров) -->
+  <meta property="og:title" content="Плиточник в Твери | ПлиткаPRO">
+  <meta property="og:description" content="Ремонт и укладка плитки под ключ в Твери. Душевые, санузлы, разводка коммуникаций.">
+  <meta property="og:image" content="https://sergeytsiunel-prog.github.io/plitkapro-tver/images/gallery/heroy-bg.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sergeytsiunel-prog.github.io/plitkapro-tver/">
+  <link rel="canonical" href="https://sergeytsiunel-prog.github.io/plitkapro-tver/">
+
+  <!-- 🔹 Предзагрузка фонового изображения -->
   <link rel="preload" href="images/gallery/heroy-bg.jpg" as="image">
+
+  <!-- 🔹 Яндекс.Метрика -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j=0;j<document.scripts.length;j++){if (document.scripts[j].src===r){return;}}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(12345678, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/12345678" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+  <!-- 🔹 Основные стили -->
   <style>
-    /* ========= Variables & Reset ========= */
-    :root{
+    :root {
       --white: #ffffff;
       --glass: rgba(255,255,255,0.14);
       --glass-strong: rgba(255,255,255,0.9);
       --card-bg: rgba(0,0,0,0.45);
-      --accent-text: #1E293B; /* used inside light inputs */
+      --accent-text: #1E293B;
       --max-width: 1200px;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
       font-family: Inter, "Segoe UI", Roboto, sans-serif;
-      color:var(--white);
-      /* Fixed background (applies site-wide) */
+      color: var(--white);
       background: url('images/gallery/heroy-bg.jpg') center/cover no-repeat fixed;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       scroll-behavior: smooth;
     }
-    img{max-width:100%;display:block;height:auto}
-    a{color:inherit;text-decoration:none}
-    .container{width:90%;max-width:var(--max-width);margin:0 auto}
 
-    /* ========= Header / Nav ========= */
-    header{
-      position:fixed;
-      left:0;right:0;top:0;
-      z-index:1200;
-      padding:14px 0;
-      backdrop-filter: blur(4px);
-    }
-    .nav {
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-    }
-    .logo{font-weight:700;font-size:1.25rem}
-    .nav-right{display:flex;gap:16px;align-items:center}
-    .phone-link{font-weight:700;padding:8px 12px;border-radius:8px;border:2px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.06)}
-    .burger{display:none;width:44px;height:38px;align-items:center;justify-content:center;border-radius:8px;border:2px solid rgba(255,255,255,0.06);cursor:pointer}
-    .nav-menu{display:flex;gap:20px;align-items:center}
-
-    /* Mobile menu */
-    .mobile-menu{
-      display:none;
-      position:fixed;
-      top:64px; right:16px;
-      background:rgba(0,0,0,0.6);
-      padding:12px;
-      border-radius:10px;
-      box-shadow:0 8px 30px rgba(0,0,0,0.6);
-    }
-
-    /* ========= Sections (common) ========= */
-    section{
-      padding:100px 0;
-      background: url('images/gallery/heroy-bg.jpg') center/cover no-repeat fixed;
-      position:relative;
-      min-height: auto;
-    }
-    h1,h2,h3{margin:0 0 12px 0}
-    h1{font-size:2.4rem}
-    h2{font-size:1.8rem}
-    p{margin:0 0 12px 0;opacity:0.98}
-
-    /* Card / Glass effect */
-    .glass{
-      background:var(--glass);
-      backdrop-filter: blur(8px);
-      border-radius:14px;
-      padding:20px;
-      box-shadow:0 8px 30px rgba(0,0,0,0.35);
-    }
-
-    /* Grid helpers */
-    .grid{display:grid;gap:1.5rem}
-    .grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-    .grid-2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
-
-    /* Buttons */
-    .btn{
-      display:inline-block;padding:12px 20px;border-radius:10px;border:2px solid rgba(255,255,255,0.12);
-      background:rgba(255,255,255,0.12);color:var(--white);font-weight:600;cursor:pointer;
-      transition:all .2s ease;
-    }
-    .btn:hover{transform:translateY(-3px);background:rgba(255,255,255,0.28)}
-
-    /* Cards for lists */
-    .card{
-      background: var(--card-bg);
-      padding:18px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.35);
-    }
-
-    /* Gallery cards */
-    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
-    .gallery-item{border-radius:10px;overflow:hidden;cursor:pointer}
-    .gallery-item img{width:100%;height:220px;object-fit:cover;display:block}
-
-    /* Reviews */
-    .review-card{background:var(--card-bg);padding:18px;border-radius:12px;text-align:left;box-shadow:0 8px 20px rgba(0,0,0,0.35)}
-    .review-card img{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:12px;cursor:pointer}
-    .muted{opacity:0.85;font-size:0.95rem}
-
-    /* Calculator */
-    .calc-form input[type="number"],
-    .calc-form select,
-    .calc-form textarea{
-      width:100%;padding:12px;border-radius:8px;border:none;font-size:1rem;background:var(--glass-strong);color:var(--accent-text);
-    }
-    .calc-form label{display:block;margin-bottom:6px;font-weight:600;color:var(--white);opacity:0.95}
-    .calc-form .result{display:none;background:rgba(255,255,255,0.12);color:var(--white);padding:12px;border-radius:8px;margin-top:12px;font-weight:700;text-align:center}
-
-    /* Footer */
-    footer{padding:28px 0}
-    .footer-grid{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
-    .up-btn{position:fixed;right:18px;bottom:18px;background:rgba(255,255,255,0.12);border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center;cursor:pointer;border:2px solid rgba(255,255,255,0.08);z-index:1200}
-
-    /* Overlay modal for images */
-    .overlay{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.9);z-index:1400;padding:20px}
-    .overlay img{max-width:100%;max-height:100%;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,0.7)}
-
-    /* Fade-in animation */
-    .fade-in{opacity:0;transform:translateY(30px);transition:all .9s ease}
-    .fade-in.visible{opacity:1;transform:none}
-
-    /* Responsive */
-    @media (max-width:900px){
-      .nav-menu{display:none}
-      .burger{display:flex}
-      .mobile-menu{display:none}
-      header{padding:10px}
-      h1{font-size:1.8rem}
-      .gallery-item img,.review-card img{height:180px}
-      section{padding:70px 0}
-    }
-    @media (max-width:480px){
-      .container{width:95%}
-      .btn{padding:10px 14px}
-    }
+    img { max-width: 100%; display: block; height: auto; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: 90%; max-width: var(--max-width); margin: 0 auto; }
   </style>
 </head>
 <body>
