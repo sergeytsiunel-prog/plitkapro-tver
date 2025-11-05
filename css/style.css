@@ -1,4 +1,6 @@
-/* Base Styles */
+/* ===========================
+   BASE STYLES
+=========================== */
 :root {
   --primary-blue: #2563EB;
   --accent-orange: #F59E0B;
@@ -15,11 +17,16 @@
   padding: 0;
 }
 
+/* ===========================
+   BODY + BACKGROUND
+=========================== */
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   color: var(--dark-gray);
-  background-color: var(--light-gray);
+  background: url('images/gallery/heroy-bg.jpg') center center / cover no-repeat fixed;
+  background-color: #000; /* fallback */
+  overflow-x: hidden;
 }
 
 .container {
@@ -28,15 +35,18 @@ body {
   padding: 0 20px;
 }
 
-/* Header */
+/* ===========================
+   HEADER
+=========================== */
 .header {
-  background-color: var(--white);
+  background-color: rgba(255, 255, 255, 0.95);
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
   box-shadow: var(--shadow);
   padding: 1rem 0;
+  backdrop-filter: blur(6px);
 }
 
 .nav__content {
@@ -58,23 +68,23 @@ body {
   font-size: 1.1rem;
 }
 
-/* Hero Section */
+/* ===========================
+   HERO SECTION
+=========================== */
 .hero {
-  background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
   color: var(--white);
-  padding: 180px 0 100px;
   text-align: center;
+  padding: 180px 0 100px;
   margin-top: 80px;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
 }
 
 .hero__content h1 {
   font-size: 2.8rem;
   margin-bottom: 1.5rem;
   font-weight: 700;
-   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 }
 
 .hero__content p {
@@ -84,7 +94,7 @@ body {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-   text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
 .hero__badge {
@@ -99,301 +109,13 @@ body {
   box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
 }
 
-.hero__contacts {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  font-weight: 500;
-  opacity: 0.9;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 15px 40px;
-  background-color: var(--accent-orange);
-  color: var(--white);
-  border: none;
-  border-radius: var(--border-radius);
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #E58A08;
-  transform: translateY(-2px);
-}
-
-/* Sections */
-section {
-  padding: 80px 0;
-}
-
-.services, .calculator, .gallery, .errors, .partners, .contacts {
-  background: var(--white);
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2.2rem;
-  color: var(--dark-gray);
-}
-
-/* Pricing Table */
-.pricing-table {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-top: 3rem;
-}
-
-.price-item {
-  background: var(--light-gray);
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  text-align: center;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
-}
-
-.price-item:hover {
-  border-color: var(--primary-blue);
-  transform: translateY(-5px);
-}
-
-.price-item h3 {
-  margin-bottom: 1rem;
-  color: var(--dark-gray);
-}
-
-.price {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary-blue);
-}
-
-/* Calculator */
-.calc-form {
-  max-width: 500px;
-  margin: 3rem auto;
-  background: var(--light-gray);
-  padding: 2rem;
-  border-radius: var(--border-radius);
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-
-.form-group input, .form-group select {
-  width: 100%;
-  padding: 12px;
-  border: 2px solid #ddd;
-  border-radius: var(--border-radius);
-  font-size: 1rem;
-}
-
-.form-group input:focus, .form-group select:focus {
-  border-color: var(--primary-blue);
-  outline: none;
-}
-
-.form-group input[type="checkbox"] {
-  width: auto;
-  margin-right: 10px;
-}
-
-.result {
-  margin-top: 2rem;
-  padding: 1rem;
-  background: var(--primary-blue);
-  color: var(--white);
-  border-radius: var(--border-radius);
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-#price {
-  font-size: 1.5rem;
-}
-
-/* Gallery */
-.gallery-placeholder {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.gallery-item {
-  .services, .gallery, .footer {
-  background: transparent;
-  color: var(--white);
-
-}
-
-/* Warnings */
-.warnings {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 3rem 0;
-}
-
-.warning-item {
-  background: #FEF2F2;
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  border-left: 4px solid #DC2626;
-}
-
-.warning-item h3 {
-  color: #DC2626;
-  margin-bottom: 1rem;
-}
-
-.conclusion {
-  text-align: center;
-  font-size: 1.3rem;
-  color: #DC2626;
-  margin-top: 2rem;
-  padding: 1.5rem;
-  background: #FEF2F2;
-  border-radius: var(--border-radius);
-}
-
-/* Partners */
-.partners-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.partner-item {
-  background: var(--light-gray);
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  text-align: center;
-}
-
-.partner-item h3 {
-  margin-bottom: 1rem;
-  color: var(--primary-blue);
-}
-
-/* Contacts */
-.contacts-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 3rem;
-  margin-top: 3rem;
-}
-
-.contact-info {
-  background: var(--light-gray);
-  padding: 2rem;
-  border-radius: var(--border-radius);
-}
-
-.contact-info h3 {
-  margin-bottom: 1.5rem;
-  color: var(--primary-blue);
-}
-
-.contact-info p {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
-
-.contact-form {
-  background: var(--light-gray);
-  padding: 2rem;
-  border-radius: var(--border-radius);
-}
-
-.contact-form h3 {
-  margin-bottom: 1.5rem;
-  color: var(--primary-blue);
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 1rem;
-  border: 2px solid #ddd;
-  border-radius: var(--border-radius);
-  font-size: 1rem;
-}
-
-.contact-form textarea {
-  height: 100px;
-  resize: vertical;
-}
-
-/* Footer */
-.footer {
- .services, .gallery, .footer {
-  background: transparent;
-  color: var(--white);
-
-}
-
-.footer p {
-  margin-bottom: 0.5rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero__content h1 {
-    font-size: 2rem;
-  }
-  
-  h2 {
-    font-size: 1.8rem;
-  }
-  
-  .container {
-    padding: 0 15px;
-  }
-  
-  .pricing-table,
-  .warnings,
-  .partners-grid,
-  .contacts-content {
-    grid-template-columns: 1fr;
-  }
-  /* ===== НОВАЯ ГАЛЕРЕЯ ===== */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.gallery-item {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+x rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 .gallery-item img {
@@ -418,18 +140,69 @@ h2 {
   padding: 1rem;
   text-align: center;
   font-weight: 500;
-  html {
-  scroll-behavior: smooth !important; /* включаем мягкую прокрутку */
 }
 
-body {
-  scroll-snap-type: none !important; /* отключаем привязку к секциям */
-  overflow-y: auto !important; /* разрешаем обычную прокрутку */
+/* ===========================
+   REVIEWS & BEFORE-AFTER
+=========================== */
+.reviews img,
+.before-after img,
+.card img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
 }
 
-section {
-  scroll-snap-align: none !important; /* убираем прилипание блоков */
+/* ===========================
+   FOOTER
+=========================== */
+.footer {
+  background: rgba(30, 41, 59, 0.9);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 2px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(6px);
 }
 
+.footer p {
+  margin-bottom: 0.5rem;
 }
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+  .hero__content h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .gallery-item img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    margin: 20px auto;
+    padding: 60px 0;
+  }
+  .gallery-item img {
+    height: 180px;
+  }
+  body {
+  background: url('../images/gallery/heroy-bg.jpg') center center / cover no-repeat fixed;
+  background-color: #000;
 }
