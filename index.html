@@ -655,32 +655,75 @@
 </section>
 
   <!-- Section 7: Contacts -->
-  <section class="contacts">
+<section class="contacts">
     <div class="container">
-      <h2>Начнем ваш проект?</h2>
-      <p>Свяжитесь с нами для бесплатного выезда, замера и консультации.</p>
-      
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 3rem;">
-        <div style="background: rgba(255, 255, 255, 0.95); padding: 2rem; border-radius: 15px;">
-          <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem;">Контакты</h3>
-          <p style="color: var(--dark-gray); margin-bottom: 1rem; font-size: 1.1rem;">📞 Галина: +7 915 131-30-02</p>
-          <p style="color: var(--dark-gray); margin-bottom: 1rem; font-size: 1.1rem;">📞 Сергей: +7 995 774-08-93</p>
-          <p style="color: var(--dark-gray); margin-bottom: 1rem; font-size: 1.1rem;">📍 Тверь и область</p>
-          <p style="color: var(--dark-gray); font-size: 1.1rem;">🕒 Выезд мастера на замер — бесплатно</p>
-        </div>
+        <h2>Начнем ваш проект?</h2>
+        <p>Свяжитесь с нами для бесплатного выезда, замера и консультации.</p>
         
-        <div class="contact-form">
-          <h3 style="color: white; margin-bottom: 1.5rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.7);">Оставьте заявку</h3>
-          <form>
-            <input type="text" placeholder="Ваше имя" required>
-            <input type="tel" placeholder="Ваш телефон" required>
-            <textarea placeholder="Комментарий (необязательно)" rows="3"></textarea>
-            <button type="submit" class="btn" style="width: 100%;">Заказать бесплатный замер</button>
-          </form>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 3rem;">
+            <div style="background: rgba(255, 255, 255, 0.95); padding: 2rem; border-radius: 15px;">
+                <h3 style="color: #2563EB; margin-bottom: 1.5rem;">Контакты</h3>
+                <p style="color: #1E293B; margin-bottom: 1rem; font-size: 1.1rem;">📞 Денис: +7 915 717-17-15</p>
+                <p style="color: #1E293B; margin-bottom: 1rem; font-size: 1.1rem;">📞 Сергей: +7 995 774-08-93</p>
+                <p style="color: #1E293B; margin-bottom: 1rem; font-size: 1.1rem;">📍 Тверь и область</p>
+                <p style="color: #1E293B; font-size: 1.1rem;">🕒 Выезд мастера на замер — бесплатно</p>
+            </div>
+            
+            <div style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(6px); padding: 2rem; border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.3);">
+                <h3 style="color: white; margin-bottom: 1.5rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.7);">Оставьте заявку</h3>
+                <form id="contactForm">
+                    <div style="margin-bottom: 1rem;">
+                        <input type="text" id="clientName" placeholder="Ваше имя" required 
+                               style="width: 100%; padding: 12px; border: none; border-radius: 8px; background: rgba(255,255,255,0.15); color: white;">
+                    </div>
+                    
+                    <div style="margin-bottom: 1rem;">
+                        <input type="tel" id="clientPhone" placeholder="Ваш телефон" required 
+                               style="width: 100%; padding: 12px; border: none; border-radius: 8px; background: rgba(255,255,255,0.15); color: white;">
+                    </div>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <textarea id="clientMessage" placeholder="Комментарий (необязательно)" rows="3"
+                                  style="width: 100%; padding: 12px; border: none; border-radius: 8px; background: rgba(255,255,255,0.15); color: white;"></textarea>
+                    </div>
+                    
+                    <button type="button" onclick="sendToWhatsApp()" class="btn" style="width: 100%;">
+                        📱 Отправить в WhatsApp
+                    </button>
+                </form>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
+
+<script>
+function sendToWhatsApp() {
+    const name = document.getElementById('clientName').value.trim();
+    const phone = document.getElementById('clientPhone').value.trim();
+    const message = document.getElementById('clientMessage').value.trim();
+    
+    if (!name || !phone) {
+        alert('Пожалуйста, заполните имя и телефон');
+        return;
+    }
+    
+    // Формируем сообщение для WhatsApp
+    let text = `Здравствуйте! Хочу записаться на замер.%0A`;
+    text += `Имя: ${name}%0A`;
+    text += `Телефон: ${phone}%0A`;
+    if (message) {
+        text += `Комментарий: ${message}%0A`;
+    }
+    text += `Сайт: ПлиткаPRO Тверь`;
+    
+    // Открываем WhatsApp
+    const whatsappUrl = `https://wa.me/79151313002?text=${text}`;
+    window.open(whatsappUrl, '_blank');
+    
+    // Очищаем форму
+    document.getElementById('contactForm').reset();
+}
+</script>
 
   <!-- Footer -->
   <footer class="footer">

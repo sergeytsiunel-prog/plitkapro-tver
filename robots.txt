@@ -1,7 +1,9 @@
 User-agent: *
 Allow: /
+
+# Можно скрыть служебные папки, если хочешь:
 Disallow: /js/
 Disallow: /css/
 
-Sitemap: https://sergeytsiunel-prog.github.io/plitkapro-tver/sitemap.xml
-Host: https://sergeytsiunel-prog.github.io
+Sitemap: https://plitkapro69.ru/sitemap.xml
+Host: plitkapro69.ru
